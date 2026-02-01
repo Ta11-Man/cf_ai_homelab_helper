@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Cloudflare Workers / Wrangler
+.wrangler/
+dist/
+worker-site/
+
+# Environment variables
+.env
+.dev.vars
+
+# Build outputs
+frontend/dist/
+frontend/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System
+.DS_Store
+Thumbs.db
