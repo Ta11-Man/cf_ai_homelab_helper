@@ -1,6 +1,6 @@
 # cf_ai_homelab_helper 🛠️
 
-An AI-powered infrastructure assistant built on the Cloudflare Developer Platform. This tool helps home-lab enthusiasts debug connectivity issues (SSH, DNS) and automatically generates cloudflared configuration files using local LLM inference. I'm honest, and as such, you should knoe that this project is build heavily by AI.
+An AI-powered infrastructure assistant built on the Cloudflare Developer Platform. This tool helps home-lab enthusiasts debug connectivity issues (SSH, DNS) and automatically generates cloudflared configuration files using local LLM inference. I'm honest, and as such, you should know that this project is build heavily by AI.
 
 ## 🚀 Features
 
