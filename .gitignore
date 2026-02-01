@@ -22,3 +22,7 @@ yarn-error.log*
 # System
 .DS_Store
 Thumbs.db
+
+# Info
+SUMMARY.txt
+CLOUDFLARE_USAGE.md

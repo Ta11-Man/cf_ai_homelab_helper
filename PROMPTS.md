@@ -36,3 +36,14 @@ As per the assignment guidelines, this document tracks the AI prompts used to as
 "Will I get charged for any of this setup? Is there anything private that this repo will expose? ... Can you update prompt.md and readme.md to reflect how the project works and what we talked about please?"
 
 **Reasoning**: This prompt led to clarifying the cost/privacy implications (updating the README to note the Free Tier usage) and updating this `PROMPTS.md` file to accurately reflect the development history.
+
+## 6. Markdown Support
+
+**Prompt Used**:
+"Add markdown support to the chat window."
+
+**Reasoning**: This prompt led to the installation of `react-markdown` and the styling of the chat window to support markdown rendering.
+
+## Others
+
+Some more prompts were used after submission of the link, as I cleaned the project out of interest. Small fixes as I developed.

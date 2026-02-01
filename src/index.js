@@ -24,6 +24,22 @@ export class ChatSession extends DurableObject {
       return new Response(null, { headers: corsHeaders });
     }
 
+    // GET /chat -> Return history
+    if (url.pathname === "/chat" && request.method === "GET") {
+      return new Response(JSON.stringify({ messages: this.messages }), {
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
+    // DELETE /chat -> Clear history
+    if (url.pathname === "/chat" && request.method === "DELETE") {
+      this.messages = [];
+      // await this.state.storage.deleteAll(); // If we were using persistence
+      return new Response(JSON.stringify({ success: true }), {
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
     if (url.pathname === "/chat" && request.method === "POST") {
       try {
         const body = await request.json();
@@ -47,7 +63,7 @@ export class ChatSession extends DurableObject {
             {
               role: "system",
               content:
-                "You are a senior Linux Network Engineer. Help the user debug SSH, DNS, and Firewall issues. Be concise. You are 'HomeLab Helper'.",
+                "You are a senior Linux Network Engineer. Help the user debug SSH, DNS, and Firewall issues. Be concise. You are 'HomeLab Helper'. Don't brag about being a senior Linux Network Engineer.",
             },
             ...this.messages,
           ],
@@ -84,7 +100,7 @@ export default {
   async fetch(request, env, ctx) {
     const corsHeaders = {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, HEAD, POST, OPTIONS",
+      "Access-Control-Allow-Methods": "GET, HEAD, POST, DELETE, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     };
 
