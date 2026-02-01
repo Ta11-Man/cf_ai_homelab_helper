@@ -31,3 +31,11 @@ deploy-backend:
 # Deploy frontend (Pages)
 deploy-frontend: build-frontend
 	npx wrangler pages deploy frontend/dist
+
+# Clean up build artifacts and temp files
+clean:
+	rm -rf dist
+	rm -rf frontend/dist
+	rm -rf .wrangler
+	rm -rf node_modules
+	rm -rf frontend/node_modules
