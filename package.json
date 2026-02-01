@@ -1,0 +1,18 @@
+{
+  "name": "cf_ai_homelab_helper",
+  "version": "1.0.0",
+  "description": "AI-powered homelab helper",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "wrangler": "^3.0.0"
+  }
+}
